@@ -11,7 +11,7 @@ const traits = [
   { emoji: '💬', text: 'Empathetic Communicator' },
   { emoji: '🌍', text: 'Multilingual Traveler' },
   { emoji: '😊', text: 'People Person' },
-  { emoji: '🙏', text: ' Grateful Human' },
+  { emoji: '🙏', text: 'Grateful Human' },
 ];
 
 const container = {
