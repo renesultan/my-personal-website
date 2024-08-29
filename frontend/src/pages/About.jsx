@@ -13,7 +13,7 @@ const About = () => {
             My journey in tech has led me to exciting opportunities, including a Machine Learning Engineer internship at Spotify. I'm constantly seeking new challenges and ways to apply my skills to solve real-world problems.
         </p>
         <p className="mb-4">
-            When I'm not coding or learning about the latest tech trends, you can find me [Your hobbies or interests here].
+            When I'm not coding or learning about the latest tech trends, you can find me playing the piano, engaging in different sports, reading in the park, trying restaurants and coffee shops in nyc, or wildly partying ("work hard play" hard mentality).
         </p>
         <h2 className="text-2xl font-bold mt-8 mb-4">Skills</h2>
         <ul className="list-disc list-inside">

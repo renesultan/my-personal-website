@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
           <nav className="hidden md:block">
             <ul className="flex space-x-4">
               <li><Link to="/about" className="hover:text-blue-400 transition-colors">About</Link></li>
+              <li><Link to="/work" className="hover:text-blue-400 transition-colors">Work</Link></li>
               <li><Link to="/projects" className="hover:text-blue-400 transition-colors">Projects</Link></li>
               <li><Link to="/bookshelf" className="hover:text-blue-400 transition-colors">Bookshelf</Link></li>
               <li><Link to="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
         >
           <ul className="space-y-2">
             <li><Link to="/about" className="block hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+            <li><Link to="/work" className="block hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Work</Link></li>
             <li><Link to="/projects" className="block hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
             <li><Link to="/bookshelf" className="block hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Bookshelf</Link></li>
             <li><Link to="/blog" className="block hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link></li>

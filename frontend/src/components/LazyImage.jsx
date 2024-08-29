@@ -1,13 +1,11 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LazyImage = ({ src, alt, className }) => (
-  <LazyLoadImage
-    alt={alt}
-    effect="blur"
+  <img
     src={src}
+    alt={alt}
     className={className}
+    loading="lazy"
   />
 );
 
