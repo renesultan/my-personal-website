@@ -3,21 +3,20 @@ import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 import LazyImage from '../components/LazyImage';
 
-const ProjectCard = ({ title, description, technologies, image, link, date }) => (
+const ProjectCard = ({ title, description, technologies, image, link }) => (
   <motion.div 
     className="bg-gray-800 p-6 rounded-lg shadow-lg overflow-hidden"
     whileHover={{ scale: 1.05 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <div className="mb-4 h-40 overflow-hidden rounded-lg">
+    <div className="mb-4 h-48 overflow-hidden rounded-lg">
       <LazyImage 
         src={image} 
         alt={title} 
-        className="w-full h-full object-contain bg-gray-700"
+        className="w-full h-full object-cover"
       />
     </div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-sm text-gray-400 mb-2">{date}</p>
     <p className="text-gray-300 mb-4">{description}</p>
     <div className="mb-4 flex flex-wrap">
       {technologies.map((tech, index) => (
@@ -26,56 +25,49 @@ const ProjectCard = ({ title, description, technologies, image, link, date }) =>
         </span>
       ))}
     </div>
-    {link ? (
-      <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
-        View Project →
-      </a>
-    ) : (
-      <span className="text-gray-500 italic">Research Project</span>
-    )}
+    <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+      View Project →
+    </a>
   </motion.div>
 );
 
 const Projects = () => {
   const projects = [
     {
-      title: "Content Moderation ML Pipelines",
-      date: "June 2024 - August 2024",
-      description: "Developed end-to-end machine learning pipelines for content moderation at Spotify, leveraging state-of-the-art multimodal ML techniques with OpenAI's CLIP model. Created data preprocessing workflows, fine-tuned models, and built evaluation dashboards, enhancing content quality and safety across the platform.",
-      technologies: ["Python", "PyTorch", "CLIP", "GCP", "BigQuery", "Jupyter", "Pandas", "NumPy", "Seaborn", "Matplotlib"],
-      image: "/spotify-logo2.png",
-      link: null
+      title: "HTTP Client-Server Model and Dynamic Web Services",
+      description: "Developed a comprehensive system implementing an HTTP client-server model, a multi-process dynamic web server, and an interactive web application using WebSocket API. This project showcases advanced programming in C, including network programming, data structures, and real-time communication.",
+      technologies: ["C", "Socket Programming", "HTTP Protocol", "WebSocket API", "Multi-process Programming", "Data Structures", "File I/O"],
+      image: "/http-project.png",
+      link: "https://gist.github.com/renesultan/801875756d8fa8a6fda22597ed06011e#file-readme-md"
+      },
+      {
+        title: "Advanced 2048 Game Solver: A Comprehensive AI Challenge",
+        description: "Developed an advanced AI solver for the 2048 game using the expectiminimax algorithm, alpha-beta pruning, and sophisticated heuristics. This project explores the depth of automated game-playing strategies, focusing on optimizing moves, managing randomness, and maximizing scores, consistently achieving high performance.",
+        technologies: ["Python 3", "Expectiminimax Algorithm", "Alpha-beta Pruning", "Heuristic Functions", "AI Game Solving", "Modular AI Framework"],
+        image: "/2048-logo.png",
+        link: "https://gist.github.com/renesultan/e4b23a34e3355728b5f50501a191b3da"
+      },
+      {
+        title: "Rock-Paper-Scissors-Lizard-Spock Shape Interaction Simulator",
+        description: "A Java-based simulation that showcases the interaction of Rock, Paper, Scissors, Lizard, and Spock using an object-oriented approach. The project employs various design patterns, including Factory, Singleton, Observer, Strategy, Command, and Visitor, to create a clean, scalable, and maintainable system with a dynamic GUI.",
+        technologies: ["Java", "Swing", "AWT", "Factory Pattern", "Singleton Pattern", "Observer Pattern", "Strategy Pattern", "Command Pattern", "Visitor Pattern"],
+        image: "/rpskl-logo.png",
+        link: "https://gist.github.com/renesultan/4f5e835fc6557878579ffd0a32ac54c6"
+      },
+      {
+        title: "Trigram Language Model Implementation",
+        description: "An NLP project that implements a Trigram Language Model to predict word occurrence based on its preceding words in a sentence. It covers corpus processing, n-gram generation, probability calculation, and perplexity computation, demonstrating the model's application in tasks like text generation and essay scoring.",
+        technologies: ["Python 3", "NLP", "Trigram Model", "N-gram Generation", "Perplexity Calculation", "Corpus Processing"],
+        image: "/trigram-logo.png",
+        link: "https://gist.github.com/renesultan/9f875c0f8834e4c151ffa4e2f66db2b1"
     },
-    {
-      title: "LLM Performance Analysis Dashboard",
-      date: "January 2024 - May 2024",
-      description: "Led the design and implementation of advanced, filterable dashboards for in-depth LLM performance analysis at HoneyHive. Enabled users to benchmark models, compare hyperparameters, and select optimal LLM providers efficiently. Enhanced the platform's dataset management features to support multiple file types (JSON, JSONL, CSV), improving error handling and scalability for large datasets.",
-      technologies: ["React", "JavaScript", "Node.js", "LLM", "Data Visualization", "JSON", "CSV"],
-      image: "/honeyhive-logo.png",
-      link: null
-    },
-    {
-      title: "Infrastructure Crack Detection ML Pipeline",
-      date: "June 2022 - September 2022",
-      description: "Engineered a deep learning pipeline for crack detection in infrastructure imagery using PyTorch at Aren. Facilitated comprehensive damage reports for clients across multiple structure types. Evaluated 25 semantic segmentation models, comparing IoU, accuracy, precision, recall, and F1 scores. Built and deployed a data preprocessing pipeline with augmentation using the Albumentations library.",
-      technologies: ["Python", "PyTorch", "Deep Learning", "Semantic Segmentation", "Albumentations", "Data Preprocessing"],
-      image: "/aren-logo.png",
-      link: null
-    },
-    {
-      title: "AI/ML Research at Peking University",
-      date: "June 2023 - July 2023",
-      description: "Conducted AI/ML research at the Center on Frontiers of Computing Studies, Peking University. Shadowed leading researchers on projects integrating LLMs with RLHF for robot learning and multi-modal intelligence. Engaged in workshops and conferences on LLM applications, RLHF, and Federated Learning. Attended tech demos at major Chinese AI institutions including Huawei, Baidu, and ByteDance, gaining insights into cutting-edge AI applications.",
-      technologies: ["LLMs", "RLHF", "Robot Learning", "Multi-modal AI", "Federated Learning"],
-      image: "/peking-cfcs.png", // You'll need to add this image to your public folder
-      link: null
-    }
+    // Add more projects here as we go
   ];
 
   return (
     <AnimatedPage>
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">My Projects</h1>
+        <h1 className="text-3xl font-bold mb-8">Personal Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />

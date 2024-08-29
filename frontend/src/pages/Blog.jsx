@@ -15,18 +15,18 @@ const BlogPost = ({ title, date, excerpt, slug }) => (
 
 const Blog = () => {
   const posts = [
-    {
-      title: "My Journey into Machine Learning",
-      date: "August 15, 2023",
-      excerpt: "In this post, I share my experience diving into the world of machine learning, including challenges I faced and key insights I gained.",
-      slug: "journey-into-ml"
-    },
-    {
-      title: "Reflections on My Internship at Spotify",
-      date: "July 1, 2023",
-      excerpt: "I recently completed my internship at Spotify as a Machine Learning Engineer. Here are my main takeaways and how it shaped my career goals.",
-      slug: "spotify-internship-reflections"
-    },
+    // {
+    //   title: "My Journey into Machine Learning",
+    //   date: "August 15, 2023",
+    //   excerpt: "In this post, I share my experience diving into the world of machine learning, including challenges I faced and key insights I gained.",
+    //   slug: "journey-into-ml"
+    // },
+    // {
+    //   title: "Reflections on My Internship at Spotify",
+    //   date: "July 1, 2023",
+    //   excerpt: "I recently completed my internship at Spotify as a Machine Learning Engineer. Here are my main takeaways and how it shaped my career goals.",
+    //   slug: "spotify-internship-reflections"
+    // },
     // Add more blog posts as needed
   ];
 
@@ -34,6 +34,9 @@ const Blog = () => {
     <AnimatedPage>
         <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8">Blog</h1>
+        {posts.length === 0 && (
+            <p className="text-gray-300 text-center">Blog posts coming soon!</p>
+        )}
         {posts.map((post, index) => (
             <BlogPost key={index} {...post} />
         ))}
