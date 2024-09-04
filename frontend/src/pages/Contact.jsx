@@ -18,7 +18,7 @@ const Contact = () => {
     setStatus('Sending...');
 
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+      const response = await fetch('https://rene-sultan-backend-c96b63c49474.herokuapp.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
