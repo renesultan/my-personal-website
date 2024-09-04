@@ -5,7 +5,6 @@ import AnimatedPage from '../components/AnimatedPage';
 import ProfilePhoto from '../components/ProfilePhoto';
 import Introduction from '../components/Introduction';
 import PersonalityTraits from '../components/PersonalityTraits';
-import TechInterests from '../components/TechInterests';
 
 const SocialButton = ({ Icon, href, label }) => (
   <motion.a
@@ -21,65 +20,21 @@ const SocialButton = ({ Icon, href, label }) => (
   </motion.a>
 );
 
-const InterestTag = ({ children }) => (
-  <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold m-1 inline-block">
-    {children}
-  </span>
-);
-
 const Home = () => {
-  const interests = [
-    "Machine Learning", "LLMs", "Computer Vision", "Natural Language Processing",
-    "AI Ethics", "Quantum Computing", "Robotics", "Data Science"
-  ];
-
   return (
     <AnimatedPage>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 space-y-8">
         <motion.div 
-          className="col-span-1 md:col-span-2 flex flex-col items-center"
+          className="flex flex-col items-center justify-center text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <ProfilePhoto />
           <Introduction />
-        </motion.div>
-
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">🚀 What I'm Up To</h2>
-            <p className="text-gray-300">
-              Currently, I'm geeking out on advanced ML algorithms and teaching computers to understand human gibberish (aka NLP). 
-              Also, I'm on the hunt for a summer gig where I can flex my AI muscles and maybe save the world... or at least make some cool apps! 💻✨
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">🤔 Who Am I</h2>
-            <PersonalityTraits />
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">💭 What Keeps Me Up At Night</h2>
-            <TechInterests />
-          </div>
-
-          <div>
+          <div className="mt-6">
             <h2 className="text-2xl font-semibold mb-4">📫 Get in Touch</h2>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <SocialButton Icon={Github} href="https://github.com/renesultan" label="GitHub" />
               <SocialButton Icon={Twitter} href="https://twitter.com/rene_sultan" label="Twitter" />
               <SocialButton Icon={Linkedin} href="https://linkedin.com/in/renesultan" label="LinkedIn" />
@@ -88,6 +43,50 @@ const Home = () => {
             </div>
           </div>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">🚀 What I'm Up To</h2>
+              <p className="text-gray-300">
+                I am taking advanced machine learning PhD seminars at Columbia to develop a deeper intuition about building robust and scalable Machine Learning solutions. To further develop this intuition, I am seeking a New Grad role in Machine Learning Engineering at a cutting-edge company at the forefront of AI and ML R&D. I am looking for a community of passionate, self-starting, innovative, collaborative, growth-oriented, and fun-loving individuals to pioneer the next generation of ML solutions together.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">⭐ My Values</h2>
+              <PersonalityTraits />
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">🤖 My current perspective on AI and ML</h2>
+              <p className="text-gray-300 mb-4">
+                Currently, I am exploring different avenues in Machine Learning Solutions Design to develop an intuition on how to design effective, efficient, and scalable solutions for a wide range of real-world problems by understanding the underpinnings, strengths, and weaknesses of various machine learning architectures and systems. I deeply believe that as machine learning practitioners, we are experiencing a paradigm shift in how we build ML solutions across industries. This shift is driven primarily by the recent commercialization and open licensing of incredibly powerful models (such as LLMs), leveraging their massive pre-training, seamless integration, and scaling capabilities to build robust and scalable ML solutions faster than ever before.
+              </p>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">💭 Problems I am passionate about</h2>
+              <ul className="list-none space-y-2">
+                <li>🧠 How to reach AGI by developing a better understanding of the human brain and psyche</li>
+                <li>💬 How to communicate with LLMs to unlock their full potential in any given task</li>
+                <li>🤖 How to build AI systems that allow humans to delegate suitable tasks, enabling them to focus on more creative and general intelligence-related problems</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </AnimatedPage>
   );

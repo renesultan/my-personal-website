@@ -9,44 +9,44 @@ const TimelineNode = ({ isActive }) => (
 
 const WorkCard = ({ title, company, description, technologies, image, link, startDate, endDate, isLast }) => (
   <motion.div 
-    className="mb-16 relative pl-12"
+    className="mb-16 relative pl-4 sm:pl-12"
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
   >
     <TimelineNode isActive={isLast} />
-    <div className="absolute left-12 top-0 text-sm text-gray-400 w-40">
+    <div className="absolute left-4 sm:left-12 top-0 text-xs sm:text-sm text-gray-400 w-20 sm:w-40">
       {startDate}
       <br />
       {endDate}
     </div>
     <motion.div 
-      className="bg-gray-800 p-6 rounded-lg shadow-lg ml-40"
+      className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg ml-24 sm:ml-40"
       whileHover={{ scale: 1.02 }}
     >
-      <div className="mb-4 h-24 overflow-hidden rounded-lg">
+      <div className="mb-4 h-16 sm:h-24 overflow-hidden rounded-lg">
         <LazyImage 
           src={image} 
           alt={company} 
           className="w-full h-full object-contain bg-gray-700"
         />
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <h4 className="text-lg text-gray-300 mb-2">{company}</h4>
-      <p className="text-gray-300 mb-4">{description}</p>
+      <h3 className="text-lg sm:text-xl font-semibold mb-2">{title}</h3>
+      <h4 className="text-base sm:text-lg text-gray-300 mb-2">{company}</h4>
+      <p className="text-sm sm:text-base text-gray-300 mb-4">{description}</p>
       <div className="mb-4 flex flex-wrap">
         {technologies.map((tech, index) => (
-          <span key={index} className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">
+          <span key={index} className="inline-block bg-gray-700 rounded-full px-2 py-1 text-xs sm:text-sm font-semibold text-gray-200 mr-2 mb-2">
             {tech}
           </span>
         ))}
       </div>
       {link ? (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-blue-400 hover:text-blue-300 transition-colors">
           Learn More →
         </a>
       ) : (
-        <span className="text-gray-500 italic">Confidential Work</span>
+        <span className="text-sm sm:text-base text-gray-500 italic">Confidential Work</span>
       )}
     </motion.div>
   </motion.div>
@@ -110,8 +110,8 @@ const Work = () => {
   return (
     <AnimatedPage>
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-12">Career Progression</h1>
-        <div className="relative pl-3">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">Career Progression</h1>
+        <div className="relative pl-1 sm:pl-3">
           <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-600"/>
           {workExperiences.map((work, index) => (
             <WorkCard 
