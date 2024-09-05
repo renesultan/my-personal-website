@@ -38,7 +38,7 @@ const Home = () => {
               <SocialButton Icon={Github} href="https://github.com/renesultan" label="GitHub" />
               <SocialButton Icon={Twitter} href="https://twitter.com/rene_sultan" label="Twitter" />
               <SocialButton Icon={Linkedin} href="https://linkedin.com/in/renesultan" label="LinkedIn" />
-              <SocialButton Icon={Instagram} href="https://instagram.com/renesultan" label="Instagram" />
+              <SocialButton Icon={Instagram} href="https://instagram.com/rene.sultan" label="Instagram" />
               <SocialButton Icon={Mail} href="mailto:rs4240@columbia.edu" label="Email" />
             </div>
           </div>
