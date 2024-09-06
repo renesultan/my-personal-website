@@ -69,7 +69,7 @@ const Work = () => {
       company: "HoneyHive - AI Developer Platform for LLM Applications",
       startDate: "January 2024",
       endDate: "May 2024",
-      description: "Led the design and implementation of advanced, filterable dashboards for in-depth LLM performance analysis. Enabled users to benchmark models, compare hyperparameters, and select optimal LLM providers efficiently. Enhanced the platform's dataset management features to support multiple file types (JSON, JSONL, CSV), improving error handling and scalability for large datasets.",
+      description: "Contributed to the design and implementation of advanced, filterable dashboards for in-depth LLM performance analysis. Enabled users to benchmark models, compare hyperparameters, and select optimal LLM providers efficiently. Enhanced the platform's dataset management features to support multiple file types (JSON, JSONL, CSV), improving error handling and scalability for large datasets.",
       technologies: ["React", "JavaScript", "Node.js", "LLM", "Data Visualization", "JSON", "CSV"],
       image: "/honeyhive-logo.png",
       link: null
