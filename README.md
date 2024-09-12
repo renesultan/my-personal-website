@@ -16,7 +16,7 @@ This is the repository for René Sultan's personal website, showcasing his portf
   - Express.js
  
 - **Deployment:**
-  - Frontend: Verce
+  - Frontend: Vercel
   - Backend: Heroku
 
 - **Additional Libraries:**
