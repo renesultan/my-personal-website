@@ -14,6 +14,10 @@ This is the repository for René Sultan's personal website, showcasing his portf
 
   - Node.js
   - Express.js
+ 
+- **Deployment:**
+  - Frontend: Vercel
+  - Backend: Heroku
 
 - **Additional Libraries:**
   - React Router (for routing)
