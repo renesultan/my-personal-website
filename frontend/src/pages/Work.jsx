@@ -54,6 +54,16 @@ const WorkCard = ({ title, company, description, technologies, image, link, star
 
 const Work = () => {
   const workExperiences = [
+  {
+      title: "AI Research Scientist",
+      company: "Columbia Engineering - Software Systems Lab",
+      startDate: "September 2024",
+      endDate: "Present",
+      description: "Leading research on LLM security and vulnerability assessment under Professor Chengzhi Mao and Professor Junfeng Yang. Developed novel techniques for analyzing LLM vulnerabilities to membership inference attacks and jailbreaking attempts. Currently formulating a statistical mathematical framework using Bayesian learning to model and predict the impact of fine-tuning on LLM next-token prediction. Created InsultGPT, successfully demonstrating vulnerabilities in ChatGPT-4 through advanced prompt engineering and fine-tuning techniques.",
+      technologies: ["LLM Security", "Bayesian Learning", "Prompt Engineering", "Fine-tuning", "GPT Models", "Statistical Modeling", "Python", "PyTorch"],
+      image: "/cscu_logo1-nobg.png",
+      link: null
+    },
     {
       title: "Machine Learning Engineering Intern",
       company: "Spotify - Content Understanding",

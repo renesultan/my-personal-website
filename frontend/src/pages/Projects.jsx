@@ -46,10 +46,10 @@ const Projects = () => {
     },
     {
       title: "Advanced 2048 Game Solver: A Comprehensive AI Challenge",
-      description: "Developed an advanced AI solver for the 2048 game using the expectiminimax algorithm, alpha-beta pruning, and sophisticated heuristics. This project explores the depth of automated game-playing strategies, focusing on optimizing moves, managing randomness, and maximizing scores, consistently achieving high performance.",
+      description: "Developed an advanced AI solver for the 2048 game using the expectiminimax algorithm, alpha-beta pruning, and sophisticated heuristics. This project explores the depth of automated game-playing strategies, focusing on optimizing moves, managing randomness, and maximizing scores, consistently achieving high performance. (Gist link available to recruiters upon request, also included in my resume)",
       technologies: ["Python 3", "Expectiminimax Algorithm", "Alpha-beta Pruning", "Heuristic Functions", "AI Game Solving", "Modular AI Framework"],
       image: "/2048-logo.png",
-      link: "https://gist.github.com/renesultan/e4b23a34e3355728b5f50501a191b3da"
+      link: null
     },
     {
       title: "Rock-Paper-Scissors-Lizard-Spock Shape Interaction Simulator",

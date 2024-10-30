@@ -9,9 +9,9 @@ const PersonalityTraits = () => {
     { emoji: '🌱', text: 'Growth Mindset' },
     { emoji: '🤝', text: 'Honest Collaborator' },
     { emoji: '🤜🤛', text: 'Team Player' },
-    { emoji: '💬', text: 'Empathetic Communicator' },
-    { emoji: '🌍', text: 'Multilingual Traveler' },
-    { emoji: '😊', text: 'People Person' },
+    { emoji: '💬', text: 'Empathetic Listener' },
+    { emoji: '🌍', text: 'Trilingual Traveler' },
+    { emoji: '👥', text: 'People Connector' },
     { emoji: '🙏', text: 'Grateful Individual' },
   ];
 
